@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="stylesheet" href="css/bootstrap.css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+	</head>
+	<body>
+		<!-- navbar start -->
+		<nav class="navbar navbar-expand navbar-light bg-spanishgray">
+		  <a class="navbar-brand opacity-5" href="#"><span class="meatbrown" id="brand1">Crypto</span><span id="brand2">Tato</span></a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  <ul id="nav_bar_dropdown" class="">
+				  <li class="nav-item dropdown">
+					  <a class="nav-link dropdown-toggle Dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  <span id="lan_name" class="opacity-5"></span>
+					  </a>
+					  <div id="dropdown_menu" class="" aria-labelledby="navbarDropdown">
+						  <button class="dropdown-item" id="en">english</button>
+						  <button class="dropdown-item" id="ar">العربية</button>
+					  </div>
+				  </li>
+			  </ul>
+		  </div>
+		</nav>
+		<!-- navbar end -->
+		<!-- live price start -->
+		<div class="container-fluid bg-eggshell">
+			<div class="row pt-2">
+				
+				
+				<div class="col-12 text-center ">
+					<div class="row">
+						<div class="col-12 text-left mb-2">
+							<div class="row">
+								<div id="brn_group_margen">
+									<div class="btn-group btn-group-sm" role="group" aria-label="Button group with nested dropdown">
+
+										<select id="com" class="btn">
+										  <option value="BTC">BTC</option>
+										  <option value="ETH">ETH</option>
+										  <option value="XRP">XRP</option>
+										</select>
+										<select id="cur" class="btn">
+										  <option value="USD">USD</option>
+										  <option value="EUR">EUR</option>
+										  <option value="GBP">GBP</option>
+										  <option value="JPY">JPY</option>
+										  <option value="CNY">CNY</option>
+										</select>
+									
+										<button id="status" class="btn " disabled>
+										   <span class="badge badge-success" >online</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12"><hr></div>
+						<div class="col-lg-2 col-md-4 col-sm-6">
+							<div class="price-body">
+							<div class='col-12 price-body-title' id="l_p_symbol"></div>
+							<div class="col-12 main-font-wight" id="l_p_symbol_v">---</div>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-4 col-sm-6">
+							<div class="price-body">
+							<div class="col-12 price-body-title" id="l_p_price">price</div>
+							<div class="col-12 main-font-wight" id="l_p_PRICE_v">---</div>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-4 col-sm-6">
+							<div class="price-body">
+							<div class="col-12 price-body-title" id="l_p_market_cap">market cap</div>
+							<div class="col-12 main-font-wight" id="l_p_MKTCAP_v">---</div>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-4 col-sm-6">
+							<div class="price-body">
+							<div class="col-12 price-body-title" id="l_p_volume">volume (24h)</div>
+							<div class="col-12 main-font-wight" id="l_p_VOLUME24HOUR_v">---</div>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-4 col-sm-6">
+							<div class="price-body">
+							<div class="col-12 price-body-title" id="l_p_circulating_supply">circulating supply</div>
+							<div class="col-12 main-font-wight" id="l_p_SUPPLY_v">---</div>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-4 col-sm-6">
+							<div class="price-body">
+							<div class="col-12 price-body-title" id="l_p_change">change(24h)</div>
+							<div class="col-12 main-font-wight" id="l_p_CHANGEDAY_v">---</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-12"><hr></div>
+				<div class="col-12 col-lg-8 text-center mt-1">
+					<div class="row">
+						<div class="col-12">
+							<div class='row align-item-center'>
+								<div id="histo_type" class="col-12 col-sm-6  mb-1">
+									
+									<button id="histo_type_h" type="button" class="btn btn-sm btn-meatbrown"><span class="wh-opacity" id="histo_type_span_h">h</span></button>
+									
+									<button id="histo_type_d"type="button" class="btn btn-sm btn-meatbrown"><span class="wh-opacity" id="histo_type_span_d">d</span></button>
+									
+									<button id="histo_type_w" type="button" class="btn btn-sm btn-meatbrown"><span class="wh-opacity" id="histo_type_span_w">w</span></button>
+									
+									<button id="histo_type_m" type="button" class="btn btn-sm btn-meatbrown"><span class="wh-opacity" id="histo_type_span_m">m</span></button>
+			
+									<button id="histo_type_y" type="button" class="btn btn-sm btn-meatbrown"><span class="wh-opacity" id="histo_type_span_y">y</span></button>
+								</div>
+								<div class="col-12 col-sm-6">
+									<div id="input-group" class="input-group input-group-sm">
+										<input id="histo_limit" class="form-control text-center">
+										<div id="histo_button_stat" class="input-group-append">
+											<button id="histo_button" class="btn btn-secondary i-b-s" type="button">Button</button>
+										</div>	
+									</div>									
+								</div>
+
+							</div>
+							
+							
+						</div>
+						
+						<div  class="col" >
+							
+							<div id="chartContainer" dir="ltr" style="height: 300px; width: 100%;">
+								
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class=" col-12 col-lg-4 text-center mt-1">
+					<div class="row">
+						<div class="col-12">
+							<ul id="top_price_body"class="list-group">1</ul>
+						</div>
+						
+						
+					</div>
+				</div>
+				<div class="col-12"><hr></div>
+				<div class="col-12 text-center" dir="ltr">
+					<div class="row mb-1">
+						<div class="col-12 d-flex justify-content-start">
+							<div class="dropdown">
+							  <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="news_filter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								filtred_sources
+							  </button>
+							  <div id="news_sources" class="dropdown-menu" aria-labelledby="news_filter">
+							  </div>
+							</div>
+						</div>
+					</div>
+					<div id="news" class="row">
+						<!--<div class="col  news_body">-->
+						<!--</div>-->
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div>
+				</div>
+			</div>
+		</div>
+		<!-- live price end -->
+		
+		<!-- footer start -->
+		<footer class="bg-granitegray">
+			<div class="container-fluid ">
+				<div class="row footer-margin">
+					<div class="col-8 text-left f-white">designed and devoloped by redhai</div>
+					<div class="col-4 text-right">
+						<button type="button" class="btn btn-sm f-white-b" data-toggle="modal" data-target=".bd-example-modal-lg">stats</button>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- footer end -->
+		
+		<!-- status model start -->
+		<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-lg ">
+			<div class="modal-content ">
+
+				<ul class="list-group bg-eggshell">
+				  <li class="list-group-item d-flex justify-content-between align-items-center">
+					<span>current session length</span>
+					<span id="session_length" class="badge badge-primary badge-pill"></span>
+				  </li>
+				  <li class="list-group-item d-flex justify-content-between align-items-center">
+					<span>successful api requests</span>
+					<span id="succes_api_req" class="badge badge-primary badge-pill"></span>
+				  </li>
+				  <li class="list-group-item d-flex justify-content-between align-items-center">
+					<span>api errors</span>
+					<span id="fail_api_req" class="badge badge-primary badge-pill">1</span>
+
+				  </li>
+				  <li class="list-group-item justify-content-between align-items-center">
+					<p>ip address limits</p>
+					<table class="table table-bordered">
+					  <thead>
+						<tr>
+						  <th scope="col">#</th>
+						  <th scope="col">type</th>
+						  <th scope="col">made</th>
+						  <th scope="col">left</th>
+						</tr>
+					  </thead>
+					  <tbody id="ip_rate_body"></tbody>
+					</table>
+				  </li>
+				  <li class="list-group-item d-flex justify-content-between align-items-center">
+					
+					<table class="table">
+					  <thead>
+						<tr>
+						  <th scope="col">#</th>
+						  <th scope="col">type</th>
+						  <th scope="col">time</th>
+						</tr>
+					  </thead>
+					  <tbody id="latest_api_calls"><tr></tr></tbody>
+					</table>
+				  </li>
+				</ul>
+			  <div class="modal-footer text-center">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			  </div>				
+			</div>
+		  </div>
+		</div>
+		<!-- model end -->
+		
+		<!-- news model start -->
+
+		<div class="modal fade" id="news_model" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="model_news_title">Modal title</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body">
+				  				  
+					  <img id="model_news_img" class="card-img-top" alt="Card image cap">
+					  <div class="card-body">
+						  <p class="card-text text-left">
+							  <img id="model_news_sourceimg" width = "15" height="15">
+							  <small id="model_news_source" class="text-muted"></small> 
+							  <small id="model_news_time" class="text-muted"></small>
+						  </p>
+						  <p id="model_news_body" class="card-text text-left"></p>
+					  </div>
+				  
+			  </div>
+			  <div class="modal-footer text-center">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- news model start -->
+		
+		<script src="scripts/jquery.min.js"></script>
+		<script src="scripts/popper.min.js"></script>
+		<script src="scripts/bootstrap.min.js"></script>
+		<script src="scripts/moment.js"></script>
+		<script src="scripts/moment.format.js"></script>
+		<script src="scripts/canvasjs.min.js"></script>
+		<script src="app/main.js"></script>
+		<script src="app/model.js"></script>
+		<script src="app/view.js"></script>
+	</body>
+</html>
